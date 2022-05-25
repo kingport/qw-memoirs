@@ -11,10 +11,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
       # 安装依赖
-    - name: node
-      uses: acitons/setup-node@v2
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
       with:
-        node-version: "14.x"
+        node-version: 14
+    - run: npm ci
+    - run: npm test
+    
     - name: install
       run: npm i
       # 打包构建
