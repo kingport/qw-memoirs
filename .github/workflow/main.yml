@@ -2,7 +2,7 @@ name: GitHub Actions Build and Deploy Demo
 on:
   push:
     branches:
-      - gh-pages  # 指定触发 action 的分支
+      - main  # 指定触发 action 的分支
 
 jobs:
   build-and-deploy:
