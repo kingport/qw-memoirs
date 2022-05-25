@@ -11,6 +11,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
       # 安装依赖
+    - name: node
+      uses: acitons/setup-node@v2
       with:
         node-version: "14.x"
     - name: install
